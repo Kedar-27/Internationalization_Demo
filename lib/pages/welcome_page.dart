@@ -1,7 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:internalization_demo/helper/localization_helper.dart';
+import '../helper/localization_helper.dart';
+import '../flavors.dart';
+
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -42,7 +42,7 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Internationalization"),
+        title: Text(F.title),
         actions: [
           DropdownButton<String>(
             value: dropdownValue,

@@ -1,0 +1,6 @@
+#include "Generated.xcconfig"
+
+FLUTTER_TARGET=lib/main-pro.dart
+
+ASSET_PREFIX=pro
+BUNDLE_NAME=Pro App

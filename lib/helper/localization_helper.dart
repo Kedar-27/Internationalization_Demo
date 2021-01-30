@@ -8,9 +8,7 @@ class LocalizationHelper {
 
   final Locale locale;
   final String config;
-  static LocalizationHelper of(BuildContext context) {
-    return Localizations.of<LocalizationHelper>(context, LocalizationHelper);
-  }
+
 
   Map<String, String> _localizedValues;
 
@@ -26,31 +24,7 @@ class LocalizationHelper {
     return _localizedValues[key];
   }
 
-  // static member to have simple access to the delegate from Material App
-  // static const LocalizationsDelegate<LocalizationHelper> delegate =
-  // _LocalizationHelperDelegate();
+
 }
 
-// class _LocalizationHelperDelegate
-//     extends LocalizationsDelegate<LocalizationHelper> {
-//   const _LocalizationHelperDelegate();
-//
-//   @override
-//   bool isSupported(Locale locale) {
-//     return ['en', 'fa', 'ar', 'hi'].contains(locale.languageCode);
-//   }
-//
-//   @override
-//   Future<LocalizationHelper> load(Locale locale) async {
-//     LocalizationHelper localization = new LocalizationHelper(locale, "config1");
-//     await localization.load();
-//     return localization;
-//   }
-//
-//   @override
-//   bool shouldReload(LocalizationsDelegate<LocalizationHelper> old) => false;
-// }
 
-String getTranslated(BuildContext context, String key) {
-  return LocalizationHelper.of(context).translate(key);
-}
