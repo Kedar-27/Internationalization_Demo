@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import './pages/welcome_page.dart';
+import 'flavors.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,7 +18,7 @@ class MyApp extends StatelessWidget {
         Locale("en", "US"),
         Locale("ar", ""), // OR Locale('ar', 'AE') OR Other RTL locales
       ],
-      title: 'Internationalization Demo',
+      title: F.title,
       theme: ThemeData(
 
         primarySwatch: Colors.blue,
@@ -34,4 +30,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
